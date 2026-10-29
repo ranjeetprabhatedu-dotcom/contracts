@@ -11,14 +11,16 @@
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "generate": "../scripts/build_sdk.sh",
-    "build": "tsc -p tsconfig.json",
+    "build": "node init && tsc -p tsconfig.json",
     "example:deposit": "tsx examples/deposit.ts"
   },
   "dependencies": {
-    "@stellar/stellar-sdk": "^14.0.0",
+    "@stellar/stellar-sdk": "^17.4.0",
     "buffer": "^6.0.3"
   },
   "devDependencies": {
